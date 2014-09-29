@@ -1,0 +1,12 @@
+Size classes, trait collections and universal storyboards let you design one layout that works on every iOS device. 
+
+In an adaptive world, rotation is nothing more than a simple bounds change. 
+
+View controller hierarchies can adapt to their surroundings just as layouts do. You can now represent the same complex view controller with different hierarchies on different device configurations.
+
+When a new view controller appears on screen it’s now said to be presented; you can use presentation controllers to completely customize this whole process.
+
+It’s possible to have the storyboard automatically update the frames of the contained views to satisfy these constraints, but if you do this right now your image view will shrink to zero size. That’s because your image view doesn’t yet have any content – which means it has an intrinsic height and width of zero. Auto Layout relies on a view’s intrinsic size to determine its width and height if no physical width or height constraints are supplied.
+
+
+Your new image set is simply a collection of image files, where each file has a purpose for a particular scenario. For example, an image set may have non-Retina, iOS 8 by Tutorials Chapter 2: Beginning Adaptive Layout Retina and Retina HD versions of the same image. Since asset libraries are well integrated with UIKit, you refer to the entire image set by name and let iOS choose the correct file at runtime.
